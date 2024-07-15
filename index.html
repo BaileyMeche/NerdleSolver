@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nerdle Solver</title>
+<link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+<h1>Nerdle Solver</h1>
+<form id="nerdleForm">
+    <div id="inputGrid">
+        <!-- Green row for correct position -->
+        <div class="input-row" data-row-type="green">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+        <!-- Purple row for correct character, wrong position -->
+        <div class="input-row" data-row-type="purple">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+        <!-- Black row for characters not in equation -->
+        <div class="input-row" data-row-type="black">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+    </div>
+    <button type="button" onclick="processInputs()">Solve</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

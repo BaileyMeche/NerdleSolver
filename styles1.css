@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.input-row {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+input[data-row-type="green"] {
+    background-color: lightgreen;
+}
+
+input[data-row-type="purple"] {
+    background-color: lightpink;
+}
+
+input[data-row-type="black"] {
+    background-color: lightgrey;
+}
