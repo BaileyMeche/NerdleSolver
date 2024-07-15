@@ -4,48 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nerdle Solver</title>
-<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>Nerdle Solver</h1>
-<form id="nerdleForm">
+<form id="nerdleForm" onsubmit="processInputs(event)">
     <div id="inputGrid">
         <!-- Green row for correct position -->
         <div class="input-row" data-row-type="green">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
+            <input type="text" maxlength="1" placeholder="G">
+            <input type="text" maxlength="1" placeholder="G">
+            <input type="text" maxlength="1" placeholder="G">
         </div>
         <!-- Purple row for correct character, wrong position -->
         <div class="input-row" data-row-type="purple">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
+            <input type="text" maxlength="1" placeholder="P">
+            <input type="text" maxlength="1" placeholder="P">
+            <input type="text" maxlength="1" placeholder="P">
         </div>
         <!-- Black row for characters not in equation -->
         <div class="input-row" data-row-type="black">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
+            <input type="text" maxlength="1" placeholder="B">
+            <input type="text" maxlength="1" placeholder="B">
+            <input type="text" maxlength="1" placeholder="B">
         </div>
     </div>
-    <button type="button" onclick="processInputs()">Solve</button>
+    <button type="submit">Solve</button>
 </form>
 <script src="script.js"></script>
 </body>
 </html>
+
