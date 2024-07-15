@@ -1,4 +1,5 @@
-function processInputs() {
+function processInputs(event) {
+    event.preventDefault(); // Prevent the default form submission
     const grid = document.getElementById('inputGrid');
     const inputs = grid.getElementsByTagName('input');
     const data = {
@@ -7,13 +8,13 @@ function processInputs() {
         black: []
     };
 
-    // Iterate over inputs and organize data by row type
     Array.from(inputs).forEach(input => {
         const type = input.parentNode.getAttribute('data-row-type');
-        data[type].push(input.value);
+        if (input.value) { // Only add non-empty values
+            data[type].push(input.value);
+        }
     });
 
-    // Send data to the server
     fetch('/solve', {
         method: 'POST',
         headers: {
@@ -22,9 +23,8 @@ function processInputs() {
         body: JSON.stringify(data)
     })
     .then(response => response.json())
-    .then(data => {
-        console.log('Result:', data);
-        alert('Check the console for results!');
-    })
+    .then(data => alert('Results processed! Check console for details.'))
     .catch(error => console.error('Error:', error));
+
+    console.log(data);
 }
