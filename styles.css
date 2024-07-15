@@ -1,17 +1,18 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .input-row {
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 input[type="text"] {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 input[data-row-type="green"] {
@@ -23,5 +24,6 @@ input[data-row-type="purple"] {
 }
 
 input[data-row-type="black"] {
-    background-color: lightgrey;
+    background-color: lightgray;
 }
+
