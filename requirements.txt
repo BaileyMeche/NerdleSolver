@@ -2,6 +2,3 @@ Flask==2.0.3
 pandas==1.3.4
 gunicorn==20.1.0
 typing-extensions==4.10.0  # If you're explicitly using this in your code for type hints.
-itertools  # Standard library, no need to include in requirements.txt
-csv  # Standard library, no need to include in requirements.txt
-time  # Standard library, no need to include in requirements.txt
